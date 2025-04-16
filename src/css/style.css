@@ -298,14 +298,14 @@ p {
     margin-bottom: -100px;
 }
 
-.feature-section .custom-block-overlay {
+.custom-block-overlay {
     height: 100%;
     min-height: 350px;
     padding: 0;
     position: relative;
 }
 
-.feature-section .custom-block-overlay .custom-block-image {
+.custom-block-overlay .custom-block-image {
     display: block;
     border-radius: var(--border-radius-medium);
     display: block;
@@ -313,7 +313,7 @@ p {
     margin-top: 0;
 }
 
-.feature-section .section-overlay {
+.section-overlay {
     background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
     position: absolute;
     top: 0;
@@ -324,7 +324,7 @@ p {
     opacity: 0.85;
 }
 
-.feature-section .custom-block-overlay-text {
+.custom-block-overlay-text {
     position: absolute;
     top: 0;
     left: 0;
@@ -332,11 +332,11 @@ p {
     padding: 30px;
 }
 
-.feature-section .custom-block-overlay-text p {
+.custom-block-overlay-text p {
     color: white;
 }
 
-.feature-section .custom-block-overlay-text .custom-btn {
+.custom-block-overlay-text .custom-btn {
     background-color: var(--custom-btn-bg-color);
     border: 2px solid transparent;
     border-radius: var(--border-radius-large);
@@ -349,11 +349,11 @@ p {
     ;
 }
 
-.feature-section .custom-block-overlay-text .custom-btn:hover {
+.custom-block-overlay-text .custom-btn:hover {
     background-color: var(--primary-color);
 }
 
-.feature-section .social-share {
+.social-share {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -364,14 +364,14 @@ p {
     width: 100%;
 }
 
-.feature-section .social-share .social-icon {
+.social-share .social-icon {
     display: flex;
     align-items: center;
     gap: 10px;
     margin: 0;
 }
 
-.feature-section .social-share .social-icon .social-icon-item {
+.social-share .social-icon .social-icon-item {
     background-color: var(--secondary-color);
     color: var(--white-color);
     border-radius: var(--border-radius-large);
@@ -383,21 +383,21 @@ p {
     transition: var(--main-transition-duration);
 }
 
-.feature-section .social-share .social-icon .social-icon-item:hover {
+.social-share .social-icon .social-icon-item:hover {
     background-color: var(--primary-color);
 }
 
-.feature-section .social-share .social-icon .social-icon-item a {
+.social-share .social-icon .social-icon-item a {
     color: var(--white-color);
 }
 
-.feature-section .social-share .custom-icon {
+.social-share .custom-icon {
     font-size: var(--h5-font-size);
     color: var(--white-color);
     transition: var(--main-transition-duration);
 }
 
-.feature-section .social-share .custom-icon:hover {
+.social-share .custom-icon:hover {
     color: var(--primary-color);
 }
 
