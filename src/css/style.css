@@ -43,10 +43,11 @@ html {
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Montserrat", sans-serif;
     height: 10000px;
 }
 
+/* Start Component  */
 ul {
     list-style: none;
 }
@@ -74,6 +75,7 @@ h1 {
 
 h2 {
     font-size: var(--h2-font-size);
+    font-weight: var(--font-weight-bold);
 }
 
 h3 {
@@ -99,6 +101,62 @@ p {
     font-weight: var(--font-weight-normal);
 }
 
+.section-padding {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.custom-block {
+    padding: 30px;
+    border-radius: var(--border-radius-medium);
+    overflow: hidden;
+    height: 100%;
+    position: relative;
+    transition: var(--main-transition-duration);
+}
+
+.custom-block:hover {
+    transform: translateY(-3px);
+}
+
+.custom-block .rounded-pill {
+    border-radius: 5px !important;
+    display: flex;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    line-height: 20px;
+}
+
+.custom-block-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-top: 35px;
+    display: block;
+}
+
+.bg-design {
+    background-color: #00B0FF;
+}
+
+.bg-advertising {
+    background-color: #F50057;
+}
+
+.bg-finance {
+    background-color: #536DFE;
+}
+
+.bg-music {
+    background-color: #F9A826;
+}
+
+.bg-education {
+    background-color: #00BFA6;
+}
+
+/* End Component  */
 
 .sticky-wrapper {
     position: absolute;
@@ -234,35 +292,10 @@ p {
     padding-bottom: 100px;
 }
 
-.feature-section .custom-block {
-    padding: 30px;
-    border-radius: var(--border-radius-medium);
-    overflow: hidden;
-    height: 100%;
+.feature-section .row {
     position: relative;
-    transition: var(--main-transition-duration);
-}
-
-.feature-section .custom-block:hover {
-    transform: translateY(-3px);
-}
-
-.feature-section .custom-block .rounded-pill {
-    background-color: #00B0FF;
-    border-radius: 5px !important;
-    display: flex;
-    justify-content: center;
-    width: 30px;
-    height: 30px;
-    line-height: 20px;
-}
-
-.feature-section .custom-block-image {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    margin-top: 35px;
-    display: block;
+    bottom: 100px;
+    margin-bottom: -100px;
 }
 
 .feature-section .custom-block-overlay {
@@ -331,6 +364,72 @@ p {
     width: 100%;
 }
 
-.feature-section .social-share .social-icon {}
+.feature-section .social-share .social-icon {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+}
+
+.feature-section .social-share .social-icon .social-icon-item {
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+    border-radius: var(--border-radius-large);
+    width: 35px;
+    height: 35px;
+    display: block;
+    text-align: center;
+    line-height: 35px;
+    transition: var(--main-transition-duration);
+}
+
+.feature-section .social-share .social-icon .social-icon-item:hover {
+    background-color: var(--primary-color);
+}
+
+.feature-section .social-share .social-icon .social-icon-item a {
+    color: var(--white-color);
+}
+
+.feature-section .social-share .custom-icon {
+    font-size: var(--h5-font-size);
+    color: var(--white-color);
+    transition: var(--main-transition-duration);
+}
+
+.feature-section .social-share .custom-icon:hover {
+    color: var(--primary-color);
+}
 
 /* End Feature section  */
+/* Start explore section  */
+.explore-section {}
+
+.explore-section .nav-tabs {
+    justify-content: center;
+    border-bottom: 1px solid #ecf3f2;
+    margin-bottom: 30px;
+}
+
+.explore-section .nav-tabs .nav-link {
+    border-radius: 0;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    padding: 15px 20px;
+    font-size: var(--btn-font-size);
+    color: var(--p-color);
+    font-weight: var(--font-weight-medium);
+    font-family: var(--title-font-family);
+    margin-right: 20px;
+    transition: var(--main-transition-duration)
+}
+
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-link:hover,
+.nav-tabs .nav-link:focus {
+    color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
+}
+
+/* End explore section  */
