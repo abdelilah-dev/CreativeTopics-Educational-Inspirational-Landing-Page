@@ -106,6 +106,35 @@ p {
     padding-bottom: 100px;
 }
 
+.custom-btn {
+    background-color: var(--custom-btn-bg-color);
+    border: 2px solid transparent;
+    border-radius: var(--border-radius-large);
+    padding: 10px 20px;
+    color: var(--white-color);
+    font-weight: bold;
+    line-height: normal;
+    font-size: var(--btn-font-size);
+    transition: var(--main-transition-duration);
+    ;
+}
+
+.custom-btn:hover {
+    background-color: var(--primary-color);
+}
+
+.custom-border-btn {
+    background-color: transparent;
+    border: 1px solid var(--custom-btn-bg-color);
+    color: var(--custom-btn-bg-color);
+}
+
+.custom-border-btn:hover {
+    background-color: var(--custom-btn-bg-color);
+    border-color: transparent;
+    color: var(--white-color);
+}
+
 .custom-block {
     padding: 30px;
     border-radius: var(--border-radius-medium);
@@ -154,6 +183,23 @@ p {
 
 .bg-education {
     background-color: #00BFA6;
+}
+
+.section-overlay {
+    background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    opacity: 0.85;
+}
+
+.clearfix::after {
+    display: block;
+    clear: both;
+    content: "";
 }
 
 /* End Component  */
@@ -313,17 +359,6 @@ p {
     margin-top: 0;
 }
 
-.section-overlay {
-    background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
-    position: absolute;
-    top: 0;
-    left: 0;
-    pointer-events: none;
-    width: 100%;
-    height: 100%;
-    opacity: 0.85;
-}
-
 .custom-block-overlay-text {
     position: absolute;
     top: 0;
@@ -334,23 +369,6 @@ p {
 
 .custom-block-overlay-text p {
     color: white;
-}
-
-.custom-block-overlay-text .custom-btn {
-    background-color: var(--custom-btn-bg-color);
-    border: 2px solid transparent;
-    border-radius: var(--border-radius-large);
-    padding: 10px 20px;
-    color: var(--white-color);
-    font-weight: bold;
-    line-height: normal;
-    font-size: var(--btn-font-size);
-    transition: var(--main-transition-duration);
-    ;
-}
-
-.custom-block-overlay-text .custom-btn:hover {
-    background-color: var(--primary-color);
 }
 
 .social-share {
@@ -433,3 +451,88 @@ p {
 }
 
 /* End explore section  */
+/* Start timeline section  */
+.timeline-section {
+    background-image: url("../../public/images/colleagues-working-cozy-office-medium-shot.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.timeline-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.timeline-section .vertical-scrollable-timeline li {
+    padding: 20px 0px 65px 145px;
+    position: relative;
+}
+
+.timeline-section .vertical-scrollable-timeline .icon-holder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 104px;
+    height: 104px;
+    border-radius: 50%;
+    background-color: var(--secondary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--main-transition-duration);
+}
+
+.timeline-section .vertical-scrollable-timeline li.active .icon-holder {
+    background-color: var(--primary-color);
+}
+
+.timeline-section .vertical-scrollable-timeline .icon-holder:before {
+    content: "";
+    width: 80px;
+    height: 80px;
+    background-color: transparent;
+    border: 4px solid white;
+    border-radius: 50%;
+    position: absolute;
+    transition: var(--main-transition-duration);
+}
+
+.timeline-section .vertical-scrollable-timeline .icon-holder i {
+    font-size: 25px;
+    color: var(--white-color);
+}
+
+/* End timeline section  */
+
+/* Start faq-section  */
+.faq-section {}
+
+.faq-section .accordion-item {
+    border: 0;
+    outline: 0;
+}
+
+.faq-section .accordion-item .accordion-button {
+    border-radius: var(--border-radius-large);
+    font-size: var(--h6-font-size);
+    font-weight: var(--font-weight-semibold);
+
+}
+
+.accordion-item:first-of-type .accordion-button {
+    border-radius: var(--border-radius-large) !important;
+}
+
+.accordion-item:last-of-type .accordion-button {
+    border-radius: var(--border-radius-large) !important;
+}
+
+.faq-section .accordion-body {
+    font-size: var(--p-font-size);
+    color: var(--p-color);
+    line-height: 40px;
+}
+
+/* End faq-section  */
