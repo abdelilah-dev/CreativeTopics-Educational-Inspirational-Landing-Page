@@ -44,7 +44,6 @@ html {
 
 body {
     font-family: "Montserrat", sans-serif;
-    height: 10000px;
 }
 
 /* Start Component  */
@@ -52,10 +51,20 @@ ul {
     list-style: none;
 }
 
-a {
-    text-decoration: none;
+ul li {
+    font-weight: var(--font-weight-normal);
+    font-size: var(--p-font-size);
+    color: var(--p-color);
 }
 
+a {
+    text-decoration: none;
+    transition: var(--main-transition-duration);
+}
+
+a:hover {
+    color: var(--link-hover-color);
+}
 
 h1,
 h2,
@@ -104,6 +113,13 @@ p {
 .section-padding {
     padding-top: 100px;
     padding-bottom: 100px;
+}
+
+@media (max-width: 992px) {
+    .section-padding {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
 }
 
 .custom-btn {
@@ -202,6 +218,17 @@ p {
     content: "";
 }
 
+.section-bg {
+    background-color: var(--section-bg-color);
+}
+
+.site-footer-link {
+    color: var(--secondary-color);
+    font-size: var(--copyright-font-size);
+    font-weight: var(--font-weight-medium);
+    line-height: normal;
+}
+
 /* End Component  */
 
 .sticky-wrapper {
@@ -233,14 +260,12 @@ p {
     }
 }
 
-.navbar .navbar-brand {
+.navbar-brand {
     font-size: var(--h3-font-size);
     font-weight: var(--font-weight-bold);
+    display: block;
 }
 
-.navbar .navbar-brand span {
-    font-size: var(--h3-font-size);
-}
 
 .navbar .navbar-nav .nav-link {
     padding: 10px;
@@ -518,7 +543,6 @@ p {
     border-radius: var(--border-radius-large);
     font-size: var(--h6-font-size);
     font-weight: var(--font-weight-semibold);
-
 }
 
 .accordion-item:first-of-type .accordion-button {
@@ -536,3 +560,33 @@ p {
 }
 
 /* End faq-section  */
+
+/* Start footer Section  */
+.site-footer-title {
+    color: var(--primary-color);
+}
+
+.site-footer-links {
+    padding-left: 0;
+}
+
+.site-footer-item {
+    list-style: none;
+    line-height: normal;
+    display: block;
+}
+
+.btn-group .dropdown-toggle {
+    background-color: var(--secondary-color);
+    border-color: transparent;
+    font-weight: var(--font-weight-medium);
+}
+
+.btn-group .dropdown-toggle:hover {
+    background-color: var(--primary-color);
+}
+.btn-group ul li {
+    font-size: 16px;
+    font-weight: var(--font-weight-medium);
+}
+/* End footer Section  */
