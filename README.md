@@ -33,7 +33,7 @@ Improvements were made to structure, responsiveness, and code organization.
 
 ## 🌍 Live Demo
 
-[Coming Soon](https://creative-topics-educational-inspirational-landing-page.vercel.app/)
+[Here](https://creative-topics-educational-inspirational-landing-page.vercel.app/)
 
 ## 📬 Contact
 
