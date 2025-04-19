@@ -40,6 +40,7 @@
 
 html {
     scroll-behavior: smooth;
+    transition: all 0.5s;
 }
 
 body {

@@ -3,12 +3,20 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import '../css/style.css'
 
-let timelineSection = document.querySelector(".timeline-section")
 let timelineItems = document.querySelectorAll(".vertical-scrollable-timeline li");
-console.log(timelineItems);
+let allTargetSections = document.querySelectorAll(".target-section");
+let navLinks = document.querySelectorAll(".nav-link");
+
+
 window.onscroll = function () {
     if (window.scrollY > 10) document.querySelector(".sticky-wrapper").classList.add("is-sticky");
-    else document.querySelector(".sticky-wrapper").classList.remove("is-sticky");
+    else {
+        navLinks.forEach((ele) => {
+            ele.classList.remove("active");
+        })
+        navLinks[0].classList.add("active");
+        document.querySelector(".sticky-wrapper").classList.remove("is-sticky");
+    }
 
     timelineItems.forEach(item => {
         let itemOffsetTop = item.getBoundingClientRect().top + window.scrollY;
@@ -18,5 +26,15 @@ window.onscroll = function () {
             item.classList.remove("active");
         }
     });
+
+    allTargetSections.forEach((ele, index) => {
+        let offset = ele.getBoundingClientRect().top + window.scrollY;
+        if (window.scrollY >= offset - 200) {
+            navLinks.forEach((ele) => {
+                ele.classList.remove("active");
+            })
+            navLinks[index + 1].classList.add("active");
+        }
+    })
 }
 
