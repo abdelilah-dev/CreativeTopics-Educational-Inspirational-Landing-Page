@@ -384,6 +384,7 @@ blockquote {
 
 .hero-section .input-group span {
     border: 0;
+    background-color: transparent;
 }
 
 .hero-section .input-group input {
