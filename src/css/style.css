@@ -60,7 +60,8 @@ ul li {
 
 a {
     text-decoration: none;
-    transition: var(--main-transition-duration);
+    color: var(--primary-color);
+    transition: all var(--main-transition-duration);
 }
 
 a:hover {
@@ -138,6 +139,7 @@ p {
 
 .custom-btn:hover {
     background-color: var(--primary-color);
+    color: var(--white-color);
 }
 
 .custom-border-btn {
@@ -228,6 +230,62 @@ p {
     font-size: var(--copyright-font-size);
     font-weight: var(--font-weight-medium);
     line-height: normal;
+}
+
+.breadcrumb-item a:hover {
+    color: var(--white-color);
+}
+
+.breadcrumb-item.active {
+    color: var(--white-color);
+}
+
+blockquote {
+    background-color: var(--section-bg-color);
+    border-radius: var(--border-radius-small);
+    font-family: var(--title-font-family);
+    font-size: var(--h4-font-size);
+    font-weight: var(--font-weight-bold);
+    display: inline-block;
+    text-align: center;
+    margin: 30px;
+    padding: 40px;
+}
+
+.custom-form {
+    width: 95%;
+}
+
+.custom-form .form-control {
+    padding: 13px 0px 13px 20px;
+    margin-bottom: 25px;
+    border-radius: var(--border-radius-large);
+    outline: none;
+    color: var(--p-color);
+}
+
+.custom-form button[type=submit] {
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+    font-size: var(--p-font-size);
+    font-family: var(--title-font-family);
+    font-weight: var(--font-weight-semibold);
+    border-radius: var(--border-radius-large);
+    border: none;
+    transition: var(--main-transition-duration);
+    margin-bottom: 0;
+}
+
+.custom-form button[type=submit]:hover {
+    background-color: var(--primary-color);
+}
+
+@media (max-width : 992px) {
+
+    .custom-block-topic-listing>.d-flex,
+    .custom-block-topics-listing-info {
+        flex-direction: column !important;
+    }
 }
 
 /* End Component  */
@@ -355,6 +413,12 @@ p {
     background-color: var(--primary-color);
 }
 
+.site-header {
+    background: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+    padding-top: 150px;
+    padding-bottom: 80px;
+}
+
 /* End hero section  */
 
 /* Start Feature section  */
@@ -435,13 +499,13 @@ p {
     color: var(--white-color);
 }
 
-.social-share .custom-icon {
+.custom-icon {
     font-size: var(--h5-font-size);
     color: var(--white-color);
     transition: var(--main-transition-duration);
 }
 
-.social-share .custom-icon:hover {
+.custom-icon:hover {
     color: var(--primary-color);
 }
 
@@ -586,8 +650,84 @@ p {
 .btn-group .dropdown-toggle:hover {
     background-color: var(--primary-color);
 }
+
 .btn-group ul li {
     font-size: 16px;
     font-weight: var(--font-weight-medium);
 }
+
 /* End footer Section  */
+
+
+.topic-details-block {
+    border-radius: var(--border-radius-medium);
+    position: relative;
+    overflow: hidden;
+}
+
+.topic-detail-block-img {
+    display: block;
+    border-radius: var(--border-radius-medium);
+}
+
+.newsletter-img {
+    border-radius: var(--border-radius-medium);
+}
+
+.subscribe-form-wrap {
+    padding: 50px;
+}
+
+.custom-block-topic-listing {
+    height: inherit;
+}
+
+.custom-block-topics-listing-info {
+    margin: 30px 20px 20px 30px;
+}
+
+.custom-block-topic-listing .custom-block-image {
+    width: 200px;
+}
+
+@media (max-width:992px) {
+    .custom-block-topic-listing .custom-block-image {
+        width: auto;
+    }
+}
+
+.pagination {
+    margin-top: 40px;
+}
+
+.pagination {}
+
+.page-link {
+    border: 0;
+    border-radius: var(--border-radius-small);
+    padding: 10px 20px;
+    margin: 0 5px;
+    font-family: var(--title-font-family);
+    color: var(--p-color);
+}
+
+.page-item.active .page-link {
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+}
+
+.page-link:hover {
+    color: var(--white-color);
+    background-color: var(--secondary-color);
+}
+
+.page-item:first-child .page-link,
+.page-item:last-child .page-link {
+    background-color: var(--section-bg-color);
+    border-radius: var(--border-radius-small);
+}
+
+.page-item:first-child .page-link:hover,
+.page-item:last-child .page-link:hover {
+    background-color: var(--secondary-color);
+}
