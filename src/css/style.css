@@ -395,6 +395,7 @@ blockquote {
     padding-left: 0;
     padding-right: 10px;
     box-shadow: none;
+    margin-bottom: 0;
 }
 
 .hero-section .input-group button {
