@@ -19,7 +19,7 @@ htmlFiles.forEach(file => {
     let content = fs.readFileSync(filePath, 'utf-8');
 
     if (!content.includes(jsFile)) {
-        content = content.replace('</body>', `  <script type="module" src="${jsFile}"></script>\n</body>`);
+        content = content.replace('</body>', `  <script type="module" src=".${jsFile}"></script>\n</body>`);
         fs.writeFileSync(filePath, content, 'utf-8');
         console.log(`✅ Injected script into ${file}`);
     }
