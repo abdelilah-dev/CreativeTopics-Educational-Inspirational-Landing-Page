@@ -1,20 +1,5 @@
 {
     "rewrites": [
-        {
-            "source": "/index.html",
-            "destination": "/index.html"
-        },
-        {
-            "source": "/topic-details.html",
-            "destination": "/topic-details.html"
-        },
-        {
-            "source": "/contact.html",
-            "destination": "/contact.html"
-        },
-        {
-            "source": "/topic-listing.html",
-            "destination": "/topic-listing.html"
-        }
+        
     ]
 }
